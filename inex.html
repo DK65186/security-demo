@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Network Academy - Security Verification</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #17202a;
+}
+
+header {
+    height: 64px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.container {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.badge {
+    display: inline-block;
+    background: #eef3f7;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #596773;
+    line-height: 1.5;
+}
+
+.warning {
+    background: #fff7e6;
+    border-left: 4px solid #e0a100;
+    padding: 13px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #087ea4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+.small {
+    text-align: center;
+    font-size: 12px;
+    color: #7b858d;
+    margin-top: 15px;
+}
+
+#success {
+    display: none;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 55px;
+}
+
+.flags {
+    text-align: left;
+    background: #f6f7f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.flags li {
+    margin: 9px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        Network Academy
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- FAKE SECURITY ALERT -->
+
+    <div class="card" id="login">
+
+        <div class="badge">
+            SECURITY VERIFICATION
+        </div>
+
+        <h1>
+            Account verification required
+        </h1>
+
+        <p>
+            Your learning session requires a security
+            verification before you can continue to
+            your dashboard.
+        </p>
+
+        <div class="warning">
+            <strong>Security notice:</strong><br>
+            Please verify your session to continue.
+        </div>
+
+        <button onclick="phished()">
+            VERIFY SESSION
+        </button>
+
+        <div class="small">
+            Security awareness demonstration
+        </div>
+
+    </div>
+
+
+    <!-- PHISHING RESULT -->
+
+    <div class="card" id="success">
+
+        <div class="emoji">
+            🎣
+        </div>
+
+        <h1>
+            YOU GOT PHISHED! 😂
+        </h1>
+
+        <p>
+            Don't worry — this was only a CCNA
+            security-awareness simulation.
+        </p>
+
+        <div class="flags">
+
+            <strong>Red flags:</strong>
+
+            <ul>
+                <li>Unexpected security alert</li>
+                <li>Pressure to act immediately</li>
+                <li>Suspicious verification request</li>
+                <li>Always check the real website address</li>
+            </ul>
+
+        </div>
+
+        <p class="small">
+            No username, password, or personal
+            information was collected.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function phished() {
+
+    document.getElementById("login").style.display = "none";
+
+    document.getElementById("success").style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
